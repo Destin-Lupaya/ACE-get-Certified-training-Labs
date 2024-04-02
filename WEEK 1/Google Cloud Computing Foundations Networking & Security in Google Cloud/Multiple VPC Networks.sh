@@ -226,6 +226,9 @@ gcloud compute networks subnets create managementsubnet-us-west1 --project=qwikl
 # Note: Make sure to include the /0 in the Source IPv4 ranges to specify all networks.
 # Click EQUIVALENT COMMAND LINE.
 
+gcloud compute --project=qwiklabs-gcp-01-6b9d37cc2a61 firewall-rules create managementnet-allow-icmp-ssh-rdp --direction=INGRESS --priority=1000 --network=managementnet --action=ALLOW --rules=tcp:22,tcp:3389,icmp --source-ranges=0.0.0.0/0
+
+
 # These commands illustrate that firewall rules can also be created using the Cloud Shell command line. You will create the privatenet's firewall rules using these commands with similar parameters.
 
 # Click Close.
@@ -318,6 +321,7 @@ gcloud compute networks subnets create managementsubnet-us-west1 --project=qwikl
 # Click Done.
 
 # Click EQUIVALENT CODE.
+gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs-gcp-04-26058344226c --zone=europe-west1-d --machine-type=e2-micro --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=managementsubnet-europe-west1 --metadata=enable-oslogin=true --maintenance-policy=MIGRATE --provisioning-model=STANDARD --service-account=335166508715-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --create-disk=auto-delete=yes,boot=yes,device-name=managementnet-europe-west1-vm,image=projects/debian-cloud/global/images/debian-12-bookworm-v20240312,mode=rw,size=10,type=projects/qwiklabs-gcp-04-26058344226c/zones/europe-west1-d/diskTypes/pd-balanced --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
 
 # This illustrate that VM instances can also be created using the Cloud Shell command line. You will create the privatenet-us-west1-vm instance using these commands with similar parameters.
 
