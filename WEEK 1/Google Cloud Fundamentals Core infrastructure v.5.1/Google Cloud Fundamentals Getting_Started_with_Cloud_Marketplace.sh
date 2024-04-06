@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#dstin_lupaya@wvi.org
+#destin_lupaya@wvi.org
 # Task 1. Sign in to the Google Cloud Console
 # For each lab, you get a new Google Cloud project and set of resources for a fixed time at no cost.
 
