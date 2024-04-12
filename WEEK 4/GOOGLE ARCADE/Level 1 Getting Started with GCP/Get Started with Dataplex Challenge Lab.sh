@@ -1,9 +1,9 @@
-# Get Started with Pub/Sub: Challenge Lab
+# Get Started with Dataplex: Challenge Lab
 # schedule
-# 1 hour
+# 45 minutes
 # universal_currency_alt
 # No cost
-# ARC113
+# ARC117
 # Google Cloud self-paced labs logo
 
 # Overview
@@ -13,7 +13,7 @@
 
 # To score 100% you must successfully complete all tasks within the time period!
 
-# Setup and requirements
+# Setup
 # Before you click the Start Lab button
 # Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click Start Lab, shows how long Google Cloud resources will be made available to you.
 
@@ -25,65 +25,64 @@
 # Note: Use an Incognito or private browser window to run this lab. This prevents any conflicts between your personal account and the Student account, which may cause extra charges incurred to your personal account.
 # Time to complete the lab---remember, once you start, you cannot pause a lab.
 # Note: If you already have your own personal Google Cloud account or project, do not use it for this lab to avoid extra charges to your account.
-# Note: Once the lab environment has been fully provisioned, the tasks will become visible. The tasks that are assigned to you are independent, so you are free to perform the tasks in any order you want.
 # Challenge scenario
-# You're a junior cloud engineer who is just starting out in your career. So far you have been helping teams create and manage Google Cloud resources.
+# You are just starting your junior data engineer role. So far you have been helping teams create and manage Dataplex assets.
 
-# You are expected to have the skills and knowledge for the tasks that follow.
+# You are expected to have the skills and knowledge for these tasks.
 
 # Your challenge
-# Cloud Pub/Sub is a fully-managed, asynchronous messaging service that allows you to distribute messages to subscribers in real time via independent applications.
+# You are asked to help a newly formed development team with some of their initial work on a new project. Specifically, they need to create a new Dataplex lake and organize and tag assets in the new lake; you receive the following request to complete the following tasks:
 
-# For this challenge, you may get task to use Cloud Scheduler to configure scheduled units of work, which are known as cron jobs. Once scheduled, Cloud Scheduler can then publish your messages to the relevant Cloud Pub/Sub topic for distribution to end users.
+# Create a lake with a raw zone.
+# Create and attach a Cloud Storage bucket to the zone.
+# Create and apply a tag template to tag an entire zone as protected data.
+# Some standards you should follow:
 
-# In addition to that, you may get task to create Pub/Sub Schema, Snapshot and need to setup the Pub/Sub Lite.
-
+# Ensure that any needed APIs (such as Dataplex and Data Catalog) are successfully enabled.
+# Create all resources in the <filled in at lab start> region, unless otherwise directed.
 # Each task is described in detail below, good luck!
 
-# Note: You've been assigned random tasks from the set of tasks. Please reference this Form ID: Form id and respective Task Number while reporting any issues, requesting assistance with these tasks or providing any feedback.
-# Task 1
-# Dynamically selected task will show up here...
-
+# Task 1. Create a lake with a raw zone
+# Create a lake named Customer Engagements with a regional raw zone named Raw Event Data.
 # Click Check my progress to verify the objective.
+# Create a lake with a raw zone in Dataplex
 
-# Verify Task
-# Task 2
-# Dynamically selected task will show up here...
-
+# Task 2. Create and attach a Cloud Storage bucket to the zone
+# Create a regional Cloud Storage bucket named Project ID and attach it as a regional asset named Raw Event Files to the Raw Event Data zone.
 # Click Check my progress to verify the objective.
+# Create and attach a Cloud Storage bucket to the zone
 
-# Verify Task
-# Task 3
-# Dynamically selected task will show up here...
-
+# Task 3. Create and apply a tag template to a zone
+# Create a public tag template named Protected Raw Data Template with an enumerated field named Protected Raw Data Flag that contains two values: Y and N.
+# Use this template to tag the zone named Raw Event Data as protected raw data.
 # Click Check my progress to verify the objective.
+# Create and apply a tag template to a zone
 
-# Verify Task
 # Congratulations!
-# Get Started with Pub/Sub badge
+# Get Started with Dataplex badge
 
-# You have successfully configured Cloud Scheduler to publish automated messages to a Cloud Pub/Sub topic for subscribers.
+# Earn your next skill badge
+# This self-paced lab is part of the Get Started with Dataplex skill badge quest. Completing this skill badge quest earns you the badge above, to recognize your achievement. Share your badge on your resume and social platforms, and announce your accomplishment using #GoogleCloudBadge.
 
 # Google Cloud training and certification
 # ...helps you make the most of Google Cloud technologies. Our classes include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. Certifications help you validate and prove your skill and expertise in Google Cloud technologies.
 
-# Manual Last Updated January 19, 2024
+# Manual Last Updated May 11, 2023
 
-# Lab Last Tested January 19, 2024
+# Lab Last Tested May 5, 2023
 
 # Copyright 2024 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
 
+
 # RESOLUTION
 
-# https://www.youtube.com/watch?v=d9NLxIzdh5I
+# https://www.youtube.com/watch?v=NzRcltfHzu0
+# https://github.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/blob/main/Get%20Started%20with%20Dataplex%20Challenge%20Lab/Get%20Started%20with%20Dataplex%20Challenge%20Lab.md
 
-export REGION=
+export LOCATION=us-west1
 
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Get%20Started%20with%20PubSub%20Challenge%20Lab/quicklabarc113.sh
+curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/main/Get%20Started%20with%20Dataplex%20Challenge%20Lab/arc117.sh
 
+sudo chmod +x arc117.sh
 
-sudo chmod +x quicklabarc113.sh
-
-./quicklabarc113.sh
-
-
+./arc117.sh
