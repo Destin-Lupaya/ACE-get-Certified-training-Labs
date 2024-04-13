@@ -94,7 +94,7 @@
 # gcloud is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.
 
 # (Optional) You can list the active account name with this command:
-# gcloud auth list
+ gcloud auth list
 # Copied!
 # Click Authorize.
 # Output:
@@ -105,7 +105,7 @@
 # To set the active account, run:
 #     $ gcloud config set account `ACCOUNT`
 # (Optional) You can list the project ID with this command:
-# gcloud config list project
+ gcloud config list project
 # Copied!
 # Output:
 
@@ -158,20 +158,20 @@ gcloud compute networks subnets create managementsubnet-us-west1 --project=qwikl
 # Create the privatenet network using the Cloud Shell command line.
 
 # Run the following command to create the privatenet network:
-# gcloud compute networks create privatenet --subnet-mode=custom
+gcloud compute networks create privatenet --subnet-mode=custom
 # Copied!
 # Run the following command to create the privatesubnet-us-west1 subnet:
-# gcloud compute networks subnets create privatesubnet-us-west1 --network=privatenet --region=us-west1 --range=172.16.0.0/24
+gcloud compute networks subnets create privatesubnet-us-west1 --network=privatenet --region=us-west1 --range=172.16.0.0/24
 # Copied!
 # Run the following command to create the privatesubnet-us-east4 subnet:
-# gcloud compute networks subnets create privatesubnet-us-east4 --network=privatenet --region=us-east4 --range=172.20.0.0/20
+gcloud compute networks subnets create privatesubnet-us-east4 --network=privatenet --region=us-east4 --range=172.20.0.0/20
 # Copied!
 # Test Completed Task
 # Click Check my progress to verify your performed task. If you have successfully created a privatenet network, you will see an assessment score.
 
 # Create the privatenet network
 # Run the following command to list the available VPC networks:
-# gcloud compute networks list
+ gcloud compute networks list
 # Copied!
 # The output should look like this:
 
@@ -190,7 +190,7 @@ gcloud compute networks subnets create managementsubnet-us-west1 --project=qwikl
 # ...
 # Note: default and mynetwork are auto mode networks, whereas, managementnet and privatenet are custom mode networks. Auto mode networks create subnets in each region automatically, while custom mode networks start with no subnets, giving you full control over subnet creation
 # Run the following command to list the available VPC subnets (sorted by VPC network):
-# gcloud compute networks subnets list --sort-by=NETWORK
+gcloud compute networks subnets list --sort-by=NETWORK
 # Copied!
 # The output should look like this:
 
@@ -243,7 +243,7 @@ gcloud compute --project=qwiklabs-gcp-01-6b9d37cc2a61 firewall-rules create mana
 # Create the firewall rules for privatenet network using the Cloud Shell command line.
 
 # In Cloud Shell, run the following command to create the privatenet-allow-icmp-ssh-rdp firewall rule:
-# gcloud compute firewall-rules create privatenet-allow-icmp-ssh-rdp --direction=INGRESS --priority=1000 --network=privatenet --action=ALLOW --rules=icmp,tcp:22,tcp:3389 --source-ranges=0.0.0.0/0
+ gcloud compute firewall-rules create privatenet-allow-icmp-ssh-rdp --direction=INGRESS --priority=1000 --network=privatenet --action=ALLOW --rules=icmp,tcp:22,tcp:3389 --source-ranges=0.0.0.0/0
 # Copied!
 # The output should look like this:
 
@@ -260,7 +260,7 @@ gcloud compute --project=qwiklabs-gcp-01-6b9d37cc2a61 firewall-rules create mana
 
 # Create the firewall rules for privatenet
 # Run the following command to list all the firewall rules (sorted by VPC network):
-# gcloud compute firewall-rules list --sort-by=NETWORK
+ gcloud compute firewall-rules list --sort-by=NETWORK
 # Copied!
 # The output should look like this:
 
@@ -335,7 +335,7 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 # Create the privatenet-us-west1-vm instance using the Cloud Shell command line.
 
 # In Cloud Shell, run the following command to create the privatenet-us-west1-vm instance:
-# gcloud compute instances create privatenet-us-west1-vm --zone=us-west1-b --machine-type=e2-micro --subnet=privatesubnet-us-west1
+ gcloud compute instances create privatenet-us-west1-vm --zone=us-west1-b --machine-type=e2-micro --subnet=privatesubnet-us-west1
 # Copied!
 # The output should look like this:
 
@@ -352,7 +352,7 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 
 # Create the privatenet-us-west1-vm instance
 # Run the following command to list all the VM instances (sorted by zone):
-# gcloud compute instances list --sort-by=ZONE
+ gcloud compute instances list --sort-by=ZONE
 # Copied!
 # The output should look like this:
 
@@ -394,17 +394,17 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 
 # To test connectivity to mynet-us-east4-vm's external IP, run the following command, replacing mynet-us-east4-vm's external IP:
 
-#  ping -c 3 'Enter mynet-us-east4-vm external IP here'
+ ping -c 3 'Enter mynet-us-east4-vm external IP here'
 # Copied!
 # This should work!
 
 # To test connectivity to managementnet-us-west1-vm's external IP, run the following command, replacing managementnet-us-west1-vm's external IP:
-#  ping -c 3 'Enter managementnet-us-west1-vm external IP here'
+  ping -c 3 'Enter managementnet-us-west1-vm external IP here'
 # Copied!
 # This should work!
 
 # To test connectivity to privatenet-us-west1-vm's external IP, run the following command, replacing privatenet-us-west1-vm's external IP:
-# ping -c 3 'Enter privatenet-us-west1-vm external IP here'
+ ping -c 3 'Enter privatenet-us-west1-vm external IP here'
 # Copied!
 # This should work!
 
@@ -416,15 +416,15 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 # Note the internal IP addresses for mynet-us-east4-vm, managementnet-us-west1-vm, and privatenet-us-west1-vm.
 # Return to the SSH terminal for mynet-us-west1-vm.
 # To test connectivity to mynet-us-east4-vm's internal IP, run the following command, replacing mynet-us-east4-vm's internal IP:
-# ping -c 3 'Enter mynet-us-east4-vm internal IP here'
+ ping -c 3 'Enter mynet-us-east4-vm internal IP here'
 # Copied!
 # Note: You are able to ping the internal IP address of mynet-us-east4-vm because it is on the same VPC network as the source of the ping (mynet-us-west1-vm), even though both VM instances are in separate zones, regions and continents!
 # To test connectivity to managementnet-us-west1-vm's internal IP, run the following command, replacing managementnet-us-west1-vm's internal IP:
-# ping -c 3 'Enter managementnet-us-west1-vm internal IP here'
+ ping -c 3 'Enter managementnet-us-west1-vm internal IP here'
 # Copied!
 # Note: This should not work as indicated by a 100% packet loss!
 # To test connectivity to privatenet-us-west1-vm's internal IP, run the following command, replacing privatenet-us-west1-vm's internal IP:
-# ping -c 3 'Enter privatenet-us-west1-vm internal IP here'
+ ping -c 3 'Enter privatenet-us-west1-vm internal IP here'
 # Copied!
 # Note: This should not work either as indicated by a 100% packet loss! You are unable to ping the internal IP address of managementnet-us-west1-vm and privatenet-us-west1-vm because they are in separate VPC networks from the source of the ping (mynet-us-west1-vm), even though they are all in the same region us-west1.
 # VPC networks are by default isolated private networking domains. However, no internal IP address communication is allowed between networks, unless you set up mechanisms such as VPC peering or VPN.
@@ -509,7 +509,7 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 # In the Cloud console, navigate to Navigation menu > Compute Engine > VM instances.
 # For vm-appliance, click SSH to launch a terminal and connect.
 # Run the following, to list the network interfaces within the VM instance:
-# sudo ifconfig
+ sudo ifconfig
 # Copied!
 # The output should look like this:
 
@@ -554,7 +554,7 @@ gcloud compute instances create managementnet-europe-west1-vm --project=qwiklabs
 # Copied!
 # Note: You are able to ping privatenet-us-west1-vm by its name because VPC networks have an internal DNS service that allows you to address instances by their DNS names rather than their internal IP addresses. When an internal DNS query is made with the instance hostname, it resolves to the primary interface (nic0) of the instance. Therefore, this only works for privatenet-us-west1-vm in this case.
 # To test connectivity to managementnet-us-west1-vm's internal IP, run the following command, replacing managementnet-us-west1-vm's internal IP:
-# ping -c 3 'Enter managementnet-us-west1-vm's internal IP here'
+ ping -c 3 'Enter managementnet-us-west1-vm's internal IP here
 # Copied!
 # This works!
 
