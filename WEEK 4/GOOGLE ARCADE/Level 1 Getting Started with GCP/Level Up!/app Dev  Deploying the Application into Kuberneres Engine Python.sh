@@ -392,3 +392,13 @@
 # Lab Last Tested November 03, 2023
 
 # Copyright 2024 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
+
+# RESOLUTION
+
+export ZONE=us-east4-c
+
+curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/main/App%20Dev%20Deploying%20the%20Application%20into%20Kubernetes%20Engine%20-%20Python/gsp188.sh
+
+sudo chmod +x gsp188.sh
+
+./gsp188.sh
