@@ -103,3 +103,14 @@
 # Analyze sentiment with the Natural Language API
 
 # Congratulations!
+
+# RESOLUTION
+
+
+export API_KEY=AIzaSyC-j3kiR0_RIkEVLWoZHNoqRYsVHgNAANs
+
+curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%20Challenge%20Lab/arc114.sh
+
+sudo chmod +x arc114.sh
+
+./arc114.sh
