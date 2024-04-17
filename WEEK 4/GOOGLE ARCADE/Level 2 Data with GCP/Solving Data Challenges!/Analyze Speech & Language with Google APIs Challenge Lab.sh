@@ -107,7 +107,7 @@
 # RESOLUTION
 
 
-export API_KEY=AIzaSyC-j3kiR0_RIkEVLWoZHNoqRYsVHgNAANs
+export API_KEY=
 
 curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%20Challenge%20Lab/arc114.sh
 
