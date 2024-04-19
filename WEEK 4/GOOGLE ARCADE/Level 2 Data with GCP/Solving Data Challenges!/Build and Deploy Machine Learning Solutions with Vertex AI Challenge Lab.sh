@@ -135,3 +135,50 @@
 # Lab Last Tested February 16, 2024
 
 # Copyright 2024 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
+
+# RESOLUTION
+# https://www.youtube.com/watch?v=5YOvpPtWMnI&t=19s
+# Build and Deploy Machine Learning Solutions with Vertex AI: Challenge Lab || GSP354 ||
+# Solution here
+# Task 1: Create a Vertex Notebooks instance
+# Navigate to Vertex AI > Workbench > Instances.
+
+# Click on the Create New button.
+
+# Fill out the form with the following options:
+
+# Name: vertex-ai-challenge
+# Region: Check Lab Instruction
+# Zone: Leave the value as default
+# Click on Environment.
+
+# Select Use a previous version. In the Version dropdown, select workbench-instances-v20240214 (M117)
+
+# Click Continue.
+
+# Select e2-standard-4 as the Machine Type.
+
+# Click Create.
+
+# Task 2: Download the challenge notebook
+# In your notebook, click the terminal.
+
+# Clone the repo by running this command:
+
+# git clone https://github.com/QUICK-GCP-LAB/training-data-analyst.git
+# Install the required packages for the lab:
+# cd training-data-analyst/quests/vertex-ai/vertex-challenge-lab
+# pip install -U -r requirements.txt --user
+# Go to the enclosing folder: training-data-analyst/quests/vertex-ai/vertex-challenge-lab.
+
+# Open the notebook file vertex-challenge-lab.ipynb. When asked which kernel to use, select the TensorFlow 2-11 kernel.
+
+# In the Setup section, define your PROJECT_ID, REGION, and GCS_BUCKET variables.
+
+# For Tasks 3,4,5 & 6 Follow Video Instructions.
+# Note: This training can take around 30-40 minutes to train and deploy the model.
+# Congratulations 🎉 for Completing the Lab !
+# You Have Successfully Demonstrated Your Skills And Determination.
+# Well done!
+# Don't Forget to Join the Telegram Channel & Discussion group
+# QUICK GCP LAB
