@@ -91,7 +91,7 @@
 # gcloud is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.
 
 # (Optional) You can list the active account name with this command:
-# gcloud auth list
+ gcloud auth list
 # Copied!
 # Click Authorize.
 # Output:
@@ -102,7 +102,7 @@
 # To set the active account, run:
 #     $ gcloud config set account `ACCOUNT`
 # (Optional) You can list the project ID with this command:
-# gcloud config list project
+ gcloud config list project
 # Copied!
 # Output:
 
@@ -161,7 +161,7 @@
 
 # In the SSH terminal to blue, run the following command to install nginx:
 
-# sudo apt-get install nginx-light -y
+sudo apt-get install nginx-light -y
 # Copied!
 # Open the welcome page in the nano editor:
 # sudo nano /var/www/html/index.nginx-debian.html
@@ -169,7 +169,7 @@
 # Replace the <h1>Welcome to nginx!</h1> line with <h1>Welcome to the blue server!</h1>.
 # Press CTRL+o, ENTER, CTRL+x.
 # Verify the change:
-# cat /var/www/html/index.nginx-debian.html
+ cat /var/www/html/index.nginx-debian.html
 # Copied!
 # The output should contain the following:
 
@@ -177,21 +177,21 @@
 # <p>If you see this page, the nginx web server is successfully installed and
 # working. Further configuration is required.</p>
 # Close the SSH terminal to blue:
-# exit
+exit
 # Copied!
 # Repeat the same steps for the green server:
 
 # For green, click SSH to launch a terminal and connect.
 # Install nginx:
-# sudo apt-get install nginx-light -y
+ sudo apt-get install nginx-light -y
 # Copied!
 # Open the welcome page in the nano editor:
-# sudo nano /var/www/html/index.nginx-debian.html
+ sudo nano /var/www/html/index.nginx-debian.html
 # Copied!
 # Replace the <h1>Welcome to nginx!</h1> line with <h1>Welcome to the green server!</h1>.
 # Press CTRL+o, ENTER, CTRL+x.
 # Verify the change:
-# cat /var/www/html/index.nginx-debian.html
+ cat /var/www/html/index.nginx-debian.html
 # Copied!
 # The output should contain the following:
 
@@ -199,7 +199,7 @@
 # <p>If you see this page, the nginx web server is successfully installed and
 # working. Further configuration is required.</p>
 # Close the SSH terminal to green:
-# exit
+ exit
 # Copied!
 # Test Completed Task
 # Click Check my progress to verify your performed task. If you have completed the task successfully you will be granted an assessment score.
@@ -239,7 +239,7 @@
 
 # Run the following command to create a test-vm instance, in the ZONE zone:
 
-# gcloud compute instances create test-vm --machine-type=e2-micro --subnet=default --zone=ZONE
+ gcloud compute instances create test-vm --machine-type=e2-micro --subnet=default --zone=ZONE
 # Copied!
 # The output should look like this:
 
@@ -294,7 +294,7 @@
 
 # Return to the SSH terminal of the test-vm instance.
 # Try to list the available firewall rules:
-# gcloud compute firewall-rules list
+ gcloud compute firewall-rules list
 # Copied!
 # The output should look like this:
 
@@ -302,7 +302,7 @@
 #  - Insufficient Permission
 # Note: This should not work!
 # Try to delete the allow-http-web-server firewall rule:
-# gcloud compute firewall-rules delete allow-http-web-server
+ gcloud compute firewall-rules delete allow-http-web-server
 # Copied!
 # Enter Y, if asked to continue.
 # The output should look like this:
@@ -358,11 +358,11 @@
 # Click Close in the File Transfer window.
 # Note: If prompted, click Retry on the Connection via Cloud Identity-Aware Proxy Failed dialog and re-upload the file.
 # Authorize the VM with the credentials you just uploaded:
-# gcloud auth activate-service-account --key-file credentials.json
+ gcloud auth activate-service-account --key-file credentials.json
 # Copied!
 # Note: The image you are using has the Cloud SDK pre-installed; therefore, you don’t need to initialize the Cloud SDK. If you are attempting this lab in a different environment, make sure you have followed the procedures regarding installing the Cloud SDK.
 # Try to list the available firewall rules:
-# gcloud compute firewall-rules list
+ gcloud compute firewall-rules list
 # Copied!
 # The output should look like this:
 
@@ -375,7 +375,7 @@
 # This should work!
 
 # Try to delete the allow-http-web-server firewall rule:
-# gcloud compute firewall-rules delete allow-http-web-server
+ gcloud compute firewall-rules delete allow-http-web-server
 # Copied!
 # Enter Y, if asked to continue.
 # The output should look like this:
@@ -414,7 +414,7 @@
 
 # Try to list the available firewall rules:
 
-# gcloud compute firewall-rules list
+ gcloud compute firewall-rules list
 # Copied!
 # The output should look like this:
 
@@ -427,7 +427,7 @@
 # This should work!
 
 # Try to delete the allow-http-web-server firewall rule:
-# gcloud compute firewall-rules delete allow-http-web-server
+ gcloud compute firewall-rules delete allow-http-web-server
 # Copied!
 # Enter Y, if asked to continue.
 # The output should look like this:
