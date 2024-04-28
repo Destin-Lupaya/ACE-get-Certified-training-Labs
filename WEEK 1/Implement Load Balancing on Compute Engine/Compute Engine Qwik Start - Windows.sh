@@ -83,7 +83,7 @@
 # gcloud is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab-completion.
 
 # (Optional) You can list the active account name with this command:
-# gcloud auth list
+ gcloud auth list
 # Copied!
 # Click Authorize.
 # Output:
@@ -94,7 +94,7 @@
 # To set the active account, run:
 #     $ gcloud config set account `ACCOUNT`
 # (Optional) You can list the project ID with this command:
-# gcloud config list project
+ gcloud config list project
 # Copied!
 # Output:
 
@@ -128,7 +128,7 @@
 # The server instance may not be ready to accept RDP connections, as it takes a while for all OS components to initialize.
 
 # To see whether the server instance is ready for an RDP connection, run the following command at your Cloud Shell terminal command line:
-# gcloud compute instances get-serial-port-output instance-1
+ gcloud compute instances get-serial-port-output instance-1
 # Copied!
 # If prompted, type N and press ENTER.
 # Repeat the command until you see the following in the command output, which tells you that the OS components have initialized and the Windows Server is ready to accept your RDP connection.
@@ -138,7 +138,7 @@
 # ------------------------------------------------------------
 # RDP into the Windows Server
 # To set a password for logging into the RDP, run the following command in Cloud Shell. Be sure you replace [instance] with the VM Instance that you created, [zone] that you defined earlier and set [username] as admin.
-# gcloud compute reset-windows-password [instance] --zone [zone] --user [username]
+ gcloud compute reset-windows-password [instance] --zone [zone] --user [username]
 # Copied!
 # If asked Would you like to set or reset the password for [admin] (Y/n)?, enter Y. Record the password for use in later steps to connect.
 

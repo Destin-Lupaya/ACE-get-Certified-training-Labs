@@ -102,7 +102,7 @@
 # To set the active account, run:
 #     $ gcloud config set account `ACCOUNT`
 # (Optional) You can list the project ID with this command:
-# gcloud config list project
+ gcloud config list project
 # Copied!
 # Output:
 
@@ -127,19 +127,19 @@
 # Note: Learn more about regions and zones and see a complete list in Google Cloud Compute Engine's Regions and Zones documentation.
 # Set the region to <REGION>
 
-# gcloud config set compute/region REGION
+ gcloud config set compute/region REGION
 # Copied!
 # To view the project region setting, run the following command:
 
-# gcloud config get-value compute/region
+ gcloud config get-value compute/region
 # Copied!
 # Set the zone to <ZONE>:
 
-# gcloud config set compute/zone ZONE
+ gcloud config set compute/zone ZONE
 # Copied!
 # To view the project zone setting, run the following command:
 
-# gcloud config get-value compute/zone
+ gcloud config get-value compute/zone
 # Copied!
 # Finding project information
 # Copy your project ID to your clipboard or text editor. The project ID is listed in 2 places:
@@ -148,11 +148,11 @@
 # On the lab tab near your username and password.
 # In Cloud Shell, run the following gcloud command, to view the project id for your project:
 
-# gcloud config get-value project
+ gcloud config get-value project
 # Copied!
 # In Cloud Shell, run the following gcloud command to view details about the project:
 
-# gcloud compute project-info describe --project $(gcloud config get-value project)
+ gcloud compute project-info describe --project $(gcloud config get-value project)
 # Copied!
 # Find the zone and region metadata values in the output. You'll use the zone (google-compute-default-zone) from the output later in this lab.
 
@@ -162,15 +162,15 @@
 
 # Create an environment variable to store your Project ID:
 
-# export PROJECT_ID=$(gcloud config get-value project)
+ export PROJECT_ID=$(gcloud config get-value project)
 # Copied!
 # Create an environment variable to store your Zone:
 
-# export ZONE=$(gcloud config get-value compute/zone)
+ export ZONE=$(gcloud config get-value compute/zone)
 # Copied!
 # To verify that your variables were set properly, run the following commands:
 
-# echo -e "PROJECT ID: $PROJECT_ID\nZONE: $ZONE"
+ echo -e "PROJECT ID: $PROJECT_ID\nZONE: $ZONE"
 # Copied!
 # If the variables were set correctly, the echo commands will output your Project ID and Zone.
 
