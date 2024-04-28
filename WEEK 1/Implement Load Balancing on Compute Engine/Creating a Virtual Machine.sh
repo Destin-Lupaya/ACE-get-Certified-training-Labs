@@ -179,7 +179,7 @@
 
 # To create your VM, run the following command:
 
-# gcloud compute instances create gcelab2 --machine-type e2-medium --zone $ZONE
+gcloud compute instances create gcelab2 --machine-type e2-medium --zone $ZONE
 # Copied!
 # Output:
 
@@ -199,7 +199,7 @@
 
 # Create a virtual machine with gcloud
 # To open help for the create command, run the following command:
-# gcloud compute instances create --help
+ gcloud compute instances create --help
 # Copied!
 # Note: Press Enter or the spacebar to scroll through the help content. To exit the content, type Q.
 # Exploring gcloud commands
@@ -207,19 +207,19 @@
 
 # Run the following command:
 
-# gcloud -h
+ gcloud -h
 # Copied!
 # You can access more verbose help by appending the --help flag onto a command or running the gcloud help command.
 
 # Run the following command:
 
-# gcloud config --help
+ gcloud config --help
 # Copied!
 # To exit type Q and hit Enter.
 
 # Run the following command:
 
-# gcloud help config
+ gcloud help config
 # Copied!
 # The results of the gcloud config --help and gcloud help config commands are equivalent. Both return long, detailed help.
 
@@ -227,15 +227,15 @@
 
 # View the list of configurations in your environment:
 
-# gcloud config list
+ gcloud config list
 # Copied!
 # To see all properties and their settings:
 
-# gcloud config list --all
+ gcloud config list --all
 # Copied!
 # List your components:
 
-# gcloud components list
+ gcloud components list
 # Copied!
 # This command displays the gcloud components that are ready for you to use in this lab.
 
@@ -244,7 +244,7 @@
 
 # List the compute instance available in the project:
 
-# gcloud compute instances list
+ gcloud compute instances list
 # Copied!
 # Note: Having multiple resources deployed in a project is very common. Fortunately gcloud has some clever formatting that can help identify specific resources.
 # Example Output:
@@ -258,7 +258,7 @@
 # STATUS: RUNNING
 # List the gcelab2 virtual machine:
 
-# gcloud compute instances list --filter="name=('gcelab2')"
+ gcloud compute instances list --filter="name=('gcelab2')"
 # Copied!
 # Example Output:
 
@@ -273,7 +273,7 @@
 
 # List the firewall rules in the project:
 
-# gcloud compute firewall-rules list
+ gcloud compute firewall-rules list
 # Copied!
 # Output:
 
@@ -289,7 +289,7 @@
 # vpc-connector-to-serverless  dev-network  EGRESS     1000      icmp,udp:665-666,tcp:667            False
 # List the firewall rules for the default network:
 
-# gcloud compute firewall-rules list --filter="network='default'"
+ gcloud compute firewall-rules list --filter="network='default'"
 # Copied!
 # Output:
 
@@ -300,7 +300,7 @@
 # default-allow-ssh            default      INGRESS    65534     tcp:22                              False
 # List the firewall rules for the default network where the allow rule matches an ICMP rule:
 
-# gcloud compute firewall-rules list --filter="NETWORK:'default' AND ALLOW:'icmp'"
+ gcloud compute firewall-rules list --filter="NETWORK:'default' AND ALLOW:'icmp'"
 # Copied!
 # Output:
 
@@ -312,7 +312,7 @@
 
 # To connect to your VM with SSH, run the following command:
 
-# gcloud compute ssh gcelab2 --zone $ZONE
+ gcloud compute ssh gcelab2 --zone $ZONE
 # Copied!
 # Output:
 
@@ -335,11 +335,11 @@
 # After the @ sign indicates the host machine being accessed.
 # Install nginx web server on to virtual machine:
 
-# sudo apt install -y nginx
+ sudo apt install -y nginx
 # Copied!
 # You don't need to do anything here. To disconnect from SSH and exit the remote shell, run the following command:
 
-# exit
+ exit
 # Copied!
 # You should be back at your project's command prompt.
 
@@ -348,7 +348,7 @@
 
 # List the firewall rules for the project:
 
-# gcloud compute firewall-rules list
+ gcloud compute firewall-rules list
 # Copied!
 # Output:
 
@@ -371,16 +371,15 @@
 # Add a tag to the gcelab2 virtual machine
 # Add a firewall rule for http traffic
 # Add a tag to the virtual machine:
-
-# gcloud compute instances add-tags gcelab2 --tags http-server,https-server
+ gcloud compute instances add-tags gcelab2 --tags http-server,https-server
 # Copied!
 # Update the firewall rule to allow:
 
-# gcloud compute firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
+ gcloud compute firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
 # Copied!
 # List the firewall rules for the project:
 
-# gcloud compute firewall-rules list --filter=ALLOW:'80'
+ gcloud compute firewall-rules list --filter=ALLOW:'80'
 # Copied!
 # Output:
 
@@ -388,7 +387,7 @@
 # default-allow-http  default  INGRESS    1000      tcp:80        False
 # Verify communication is possible for http to the virtual machine:
 
-# curl http://$(gcloud compute instances list --filter=name:gcelab2 --format='value(EXTERNAL_IP)')
+ curl http://$(gcloud compute instances list --filter=name:gcelab2 --format='value(EXTERNAL_IP)')
 # Copied!
 # You will see the default nginx output.
 
@@ -397,7 +396,7 @@
 
 # View the available logs on the system:
 
-# gcloud logging logs list
+ gcloud logging logs list
 # Copied!
 # Output:
 
@@ -414,7 +413,7 @@
 # NAME: projects/qwiklabs-gcp-01-4b75909db302/logs/run.googleapis.com%2Fstdout
 # View the logs that relate to compute resources:
 
-# gcloud logging logs list --filter="compute"
+ gcloud logging logs list --filter="compute"
 # Copied!
 # Output:
 
@@ -423,11 +422,11 @@
 # NAME: projects/qwiklabs-gcp-01-4b75909db302/logs/compute.googleapis.com%2Fshielded_vm_integrity
 # Read the logs related to the resource type of gce_instance:
 
-# gcloud logging read "resource.type=gce_instance" --limit 5
+ gcloud logging read "resource.type=gce_instance" --limit 5
 # Copied!
 # Read the logs for a specific virtual machine:
 
-# gcloud logging read "resource.type=gce_instance AND labels.instance_name='gcelab2'" --limit 5
+ gcloud logging read "resource.type=gce_instance AND labels.instance_name='gcelab2'" --limit 5
 # Copied!
 # Task 6. Testing your understanding
 # The following multiple-choice question should reinforce your understanding of this lab's concepts.
