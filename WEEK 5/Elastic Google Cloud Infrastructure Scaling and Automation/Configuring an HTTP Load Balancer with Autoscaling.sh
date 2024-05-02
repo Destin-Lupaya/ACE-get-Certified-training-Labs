@@ -151,7 +151,7 @@
 # The software installation was successful. However, when a new VM is created using this image, the freshly booted VM does not have the Apache web server running. Use the following command to set the Apache service to automatically start on boot. Then test it to make sure it works.
 
 # In the webserver SSH terminal, set the service to start on boot:
-# sudo update-rc.d apache2 enable
+ sudo update-rc.d apache2 enable
 # Copied!
 # In the Cloud Console, select webserver, and then click More actions moreoptions.png .
 
