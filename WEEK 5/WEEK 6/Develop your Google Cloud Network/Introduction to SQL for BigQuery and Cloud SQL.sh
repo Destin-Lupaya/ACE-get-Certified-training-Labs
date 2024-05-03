@@ -4,7 +4,7 @@
 # schedule
 # 1 hour 15 minutes
 # universal_currency_alt
-# No cost
+# 1 Credit
 # show_chart
 # Introductory
 # GSP281
@@ -63,7 +63,7 @@
 # Note: If you see the Choose an account dialog, click Use Another Account.
 # If necessary, copy the Username below and paste it into the Sign in dialog.
 
-# student-02-99c212688fa5@qwiklabs.net
+# "Username"
 # Copied!
 # You can also find the Username in the Lab Details panel.
 
@@ -71,7 +71,7 @@
 
 # Copy the Password below and paste it into the Welcome dialog.
 
-# Oq01zsuQlrOf
+# "Password"
 # Copied!
 # You can also find the Password in the Lab Details panel.
 
@@ -162,30 +162,30 @@
 
 
 # A keyword that specifies the fields (e.g. column values) that you want to pull from your dataset.
-# check
-# SELECT
-# close
-# FROM
-# close
+
 # WHERE
+
+# FROM
+
+# SELECT
 
 
 # Specifies what table or tables to pull our data from.
-# check
-# FROM
+
+# WHERE
 
 # SELECT
 
-# WHERE
+# FROM
 
 
 # Allows us to filter tables for specific column values.
 
-# SELECT
+# WHERE
 
 # FROM
-# check
-# WHERE
+
+# SELECT
 
 # Task 2. Exploring the BigQuery console
 # The BigQuery paradigm
@@ -264,25 +264,25 @@
 
 
 # A fully-managed petabyte-scale data warehouse that runs on the Google Cloud.
-# close
-# Cloud SQL
-# check
-# BigQuery
-# close
-# Cloud Storage bucket
 
 # Google Cloud
 
+# BigQuery
+
+# Cloud Storage bucket
+
+# Cloud SQL
+
 
 # Projects contain datasets, and datasets contain tables.
-# check
+
 # True
 
 # False
 
 
 # With BigQuery, you can access datasets shared publicly from other Google Cloud projects.
-# check
+
 # True
 
 # False
@@ -348,47 +348,47 @@
 
 
 # Aggregates rows that share common criteria (e.g. a column value) and will return all of the unique entries found for such criteria.
-# check
-# GROUP BY
-# close
-# COUNT
 
 # ORDER BY
 
+# GROUP BY
+
 # AS
+
+# COUNT
 
 
 # A SQL function will count and return the number of rows that share common criteria.
 
-# ORDER BY
-# check
+# GROUP BY
+
 # COUNT
 
-# AS
+# ORDER BY
 
-# GROUP BY
+# AS
 
 
 # Creates an alias of a table or column.
 
-# ORDER BY
-# check
 # AS
 
-# COUNT
+# ORDER BY
 
 # GROUP BY
+
+# COUNT
 
 
 # Sorts the returned data from a query in ascending or descending order based on a specified criteria or column value.
 
-# GROUP BY
-
-# COUNT
-# check
 # ORDER BY
 
 # AS
+
+# GROUP BY
+
+# COUNT
 
 # Task 4. Working with Cloud SQL
 # Exporting queries as CSV files
@@ -420,9 +420,7 @@
 # Test completed task
 # Click Check my progress below to check your lab progress. If you successfully created your bucket, you'll see an assessment score.
 
-# Assessment Completed! Bucket count: 1. Bucket name(s): ["qwiklabs-gcp-00-01e18989e55b"]
 # Create a cloud storage bucket.
-# Assessment Completed! Bucket count: 1. Bucket name(s): ["qwiklabs-gcp-00-01e18989e55b"]
 # You should now be in the Cloud Console looking at your newly created Cloud Storage Bucket.
 
 # Click UPLOAD FILES and select the CSV that contains start_station_name data.
@@ -438,9 +436,7 @@
 # Test completed task
 # Click Check my progress to verify your performed task. If you have successfully uploaded CSV objects to your bucket, you will see an assessment score.
 
-# Assessment Completed! Buckets: ["qwiklabs-gcp-00-01e18989e55b"]
 # Upload CSV files to Cloud Storage.
-# Assessment Completed! Buckets: ["qwiklabs-gcp-00-01e18989e55b"]
 # Task 5. Create a Cloud SQL instance
 # In the console, select Navigation menu > SQL.
 
@@ -457,7 +453,7 @@
 # For Preset, select Development (4 vCPU, 16 GB RAM, 100 GB Storage, Single zone).
 
 # Warning: if you choose a preset larger than Development, your project will be flagged and your lab will be terminated.
-# Set the Multi zones (Highly available) field as us-central1
+# Set the Multi zones (Highly available) field as <Lab Region>
 
 # Click CREATE INSTANCE.
 
@@ -466,9 +462,7 @@
 # Test completed task
 # To check out your lab progress, click Check my progress below. If you have successfully set up your Cloud SQL instance, you will see an assessment score.
 
-# Assessment Completed! SQL instance name(s): ["my-demo"]
 # Create a CloudSQL Instance.
-# Assessment Completed! SQL instance name(s): ["my-demo"]
 # Task 6. New queries in Cloud SQL
 # CREATE keyword (databases and tables)
 # Now that you have a Cloud SQL instance up and running, create a database inside of it using the Cloud Shell Command Line.
@@ -515,9 +509,7 @@
 # Test completed task
 # Check your progress by clicking Check my progress to verify your performed task. If you have successfully created a database in the Cloud SQL instance, you will see an assessment score.
 
-# Assessment Completed! Database names: ["bike"]
 # Create a database.
-# Assessment Completed! Database names: ["bike"]
 # Create a table in Cloud Shell
 # Make a table inside of the bike database by running the following command:
 # USE bike;
@@ -635,55 +627,3 @@
 # Lab Last Tested February 02, 2024
 
 # Copyright 2024 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
-
-export REGION=us-central1
-
-curl -LO raw.githubusercontent.com/QUICK-GCP-LAB/2-Minutes-Labs-Solutions/main/Introduction%20to%20SQL%20for%20BigQuery%20and%20Cloud%20SQL/gsp281.sh
-
-sudo chmod +x gsp281.sh
-
-./gsp281.sh
-
-BLACK=`tput setaf 0`
-RED=`tput setaf 1`
-GREEN=`tput setaf 2`
-YELLOW=`tput setaf 3`
-BLUE=`tput setaf 4`
-MAGENTA=`tput setaf 5`
-CYAN=`tput setaf 6`
-WHITE=`tput setaf 7`
-
-BG_BLACK=`tput setab 0`
-BG_RED=`tput setab 1`
-BG_GREEN=`tput setab 2`
-BG_YELLOW=`tput setab 3`
-BG_BLUE=`tput setab 4`
-BG_MAGENTA=`tput setab 5`
-BG_CYAN=`tput setab 6`
-BG_WHITE=`tput setab 7`
-
-BOLD=`tput bold`
-RESET=`tput sgr0`
-#----------------------------------------------------start--------------------------------------------------#
-
-echo "${YELLOW}${BOLD}Starting${RESET}" "${GREEN}${BOLD}Execution${RESET}"
-
-gsutil mb gs://$DEVSHELL_PROJECT_ID
-
-curl -O https://raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Introduction%20to%20SQL%20for%20BigQuery%20and%20Cloud%20SQL/start_station_name.csv
-curl -O https://raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Introduction%20to%20SQL%20for%20BigQuery%20and%20Cloud%20SQL/end_station_name.csv
-
-gsutil cp start_station_name.csv gs://$DEVSHELL_PROJECT_ID/
-gsutil cp end_station_name.csv gs://$DEVSHELL_PROJECT_ID/
-
-gcloud sql instances create my-demo \
-    --database-version=MYSQL_5_7 \
-    --region=$REGION \
-    --tier=db-f1-micro \
-    --root-password=quicklab
-
-gcloud sql databases create bike --instance=my-demo
-
-echo "${RED}${BOLD}Congratulations${RESET}" "${WHITE}${BOLD}for${RESET}" "${GREEN}${BOLD}Completing the Lab !!!${RESET}"
-
-#-----------------------------------------------------end----------------------------------------------------------#
