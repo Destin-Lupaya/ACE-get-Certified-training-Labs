@@ -161,7 +161,7 @@
 
 # Note: Reset will stop and reboot the machine. It keeps the same IPs and the same persistent boot disk, but memory is wiped. Therefore, if the Apache service is available after the reset, the update-rc command was successful.
 # Check the server by connecting via SSH to the VM and entering the following command:
-# sudo service apache2 status
+ sudo service apache2 status
 # Copied!
 # Note: If you see the Connection via Cloud Identity-Aware Proxy Failed popup, click Retry.
 # The result should show Started The Apache HTTP Server.
@@ -402,11 +402,11 @@
 # To check the status of the load balancer, run the following command, replace [LB_IP_v4] with the IPv4 address of the load balancer:
 # LB_IP=[LB_IP_v4]
 # while [ -z "$RESULT" ] ;
-# do
-#   echo "Waiting for Load Balancer";
-#   sleep 5;
-#   RESULT=$(curl -m1 -s $LB_IP | grep Apache);
-# done
+do
+  echo "Waiting for Load Balancer";
+  sleep 5;
+  RESULT=$(curl -m1 -s $LB_IP | grep Apache);
+done
 # Copied!
 # Note: Once the load balancer is ready, the command will exit.
 # Open a new tab in your browser and navigate to http://[LB_IP_v4]. Make sure to replace [LB_IP_v4] with the IPv4 address of the load balancer.
@@ -441,13 +441,13 @@
 
 # To create an environment variable for your load balancer IP address, run the following command:
 
-# export LB_IP=<Enter your [LB_IP_v4] here>
+ export LB_IP=<Enter your [LB_IP_v4] here>
 # Copied!
 # Verify it with echo:
-# echo $LB_IP
+ echo $LB_IP
 # Copied!
 # To place a load on the load balancer, run the following command:
-# ab -n 500000 -c 1000 http://$LB_IP/
+ ab -n 500000 -c 1000 http://$LB_IP/
 # Copied!
 # Click Check my progress to verify the objective.
 # Stress test the HTTP load balancer
