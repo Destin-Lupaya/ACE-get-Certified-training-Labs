@@ -710,4 +710,17 @@ resource "google_compute_instance" "first-vm" {
 # For feedback, suggestions, or corrections, please use the Support tab.
 
 # Copyright 2022 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
+# resolution
 
+export USER_ID=student-04-4f84e584ad1c@qwiklabs.net
+export ZONE=europe-west1-d
+
+curl -LO raw.githubusercontent.com/Techcps/GSP-Short-Trick/master/Accessing%20the%20Google%20Cloud%20Console%20and%20Cloud%20Shell/techcps.sh
+sudo chmod +x techcps.sh
+./techcps.sh
+
+export ZONE=europe-west1-d
+
+curl -LO raw.githubusercontent.com/Techcps/GSP-Short-Trick/master/Accessing%20the%20Google%20Cloud%20Console%20and%20Cloud%20Shell/techcps1.sh
+sudo chmod +x techcps1.sh
+./techcps1.sh
