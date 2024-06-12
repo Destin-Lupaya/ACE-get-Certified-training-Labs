@@ -307,3 +307,13 @@
 
 # Copyright 2022 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.
 
+# RESOLUTION
+
+export REGION=europe-west4
+
+curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Working%20with%20Cloud%20Build/quicklab.sh
+
+sudo chmod +x quicklab.sh
+
+./quicklab.sh
+
